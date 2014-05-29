@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoLTest", "GoL\GoLTest.csproj", "{2F3BC1B8-B76F-47E9-A4B4-96B2B64D55F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoLImpl", "GoLImpl\GoLImpl.csproj", "{94CF961E-4B3D-4E99-860C-13B98A66CAA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoL_CLI", "GoL_CLI\GoL_CLI.csproj", "{1C34558C-4449-4FEE-B0F8-DC12CBE00EC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F3BC1B8-B76F-47E9-A4B4-96B2B64D55F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3BC1B8-B76F-47E9-A4B4-96B2B64D55F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3BC1B8-B76F-47E9-A4B4-96B2B64D55F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3BC1B8-B76F-47E9-A4B4-96B2B64D55F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CF961E-4B3D-4E99-860C-13B98A66CAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CF961E-4B3D-4E99-860C-13B98A66CAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CF961E-4B3D-4E99-860C-13B98A66CAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CF961E-4B3D-4E99-860C-13B98A66CAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C34558C-4449-4FEE-B0F8-DC12CBE00EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C34558C-4449-4FEE-B0F8-DC12CBE00EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C34558C-4449-4FEE-B0F8-DC12CBE00EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C34558C-4449-4FEE-B0F8-DC12CBE00EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

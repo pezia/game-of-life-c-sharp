@@ -1,0 +1,3 @@
+[submodule "SharpAvi"]
+	path = SharpAvi
+	url = https://github.com/baSSiLL/SharpAvi.git
