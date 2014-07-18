@@ -43,6 +43,8 @@
     <Compile Include="GameSolver.cs" />
     <Compile Include="ICell.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quadtree\AxisAlignedBoundingBox.cs" />
+    <Compile Include="Quadtree\Point2D.cs" />
     <Compile Include="World.cs" />
     <Compile Include="WorldConverter.cs" />
   </ItemGroup>

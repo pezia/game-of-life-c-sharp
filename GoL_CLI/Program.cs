@@ -17,11 +17,13 @@ namespace GoL_CLI
     class Program
     {
         private static Random random = new Random();
-        private readonly static int outputWidth = 1280;
-        private readonly static int outputHeight = 720;
-
+        
         static void Main(string[] args)
         {
+            int outputWidth = 1280;
+            int outputHeight = 720;
+            int generationCount = 1500;
+
             if (args.Length != 1)
             {
                 Console.WriteLine("Usage: " + System.AppDomain.CurrentDomain.FriendlyName + " <path_to_starting_figure>");
@@ -37,9 +39,9 @@ namespace GoL_CLI
             IAviVideoStream vs = avi.AddVideoStream().WithEncoder(encoder);
             byte[] frameBuffer = new byte[outputWidth * outputHeight * 4];
 
-            for (int i = 0; i < 1500; i++)
+            for (int i = 0; i < generationCount; i++)
             {
-                Bitmap image = new Bitmap(1280, 720);
+                Bitmap image = new Bitmap(outputWidth, outputHeight);
                 int start = Environment.TickCount;
                 world = solver.evolve(world);
                 timingData.Add(Environment.TickCount - start);
