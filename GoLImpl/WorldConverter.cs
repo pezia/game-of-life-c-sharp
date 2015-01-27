@@ -7,9 +7,9 @@ namespace GoL
 {
     public class WorldConverter
     {
-        public World<Cell> fromString(string input)
+        public World fromString(string input)
         {
-            World<Cell> world = new World<Cell>();
+            World world = new World();
 
             string[] lines = input.Split('\n');
 

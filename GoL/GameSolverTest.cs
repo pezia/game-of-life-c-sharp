@@ -7,20 +7,20 @@ namespace GoL
     [TestClass]
     public class GameSolverTest
     {
-        World<Cell> world;
-        GameSolver<Cell> solver;
+        World world;
+        GameSolver solver;
 
         [TestInitialize]
         public void setUp()
         {
-            world = new World<Cell>();
-            solver = new GameSolver<Cell>();
+            world = new World();
+            solver = new GameSolver();
         }
 
         [TestMethod]
         public void TestGameSolverHasEvolveMethod()
         {
-            Assert.IsInstanceOfType(solver.evolve(world), typeof(World<Cell>));
+            Assert.IsInstanceOfType(solver.evolve(world), typeof(World));
         }
 
         [TestMethod]

@@ -30,10 +30,10 @@ namespace GoL_CLI
                 return;
             }
 
-            GameSolver<Cell> solver = new GameSolver<Cell>();
+            GameSolver solver = new GameSolver();
             WorldConverter converter = new WorldConverter();
             List<long> timingData = new List<long>(300);
-            World<Cell> world = converter.fromString(System.IO.File.ReadAllText(args[0]));
+            World world = converter.fromString(System.IO.File.ReadAllText(args[0]));
             AviWriter avi = new AviWriter("out.avi") { FramesPerSecond = 30 };
             IVideoEncoder encoder = new MotionJpegVideoEncoderWpf(outputWidth, outputHeight, 100);
             IAviVideoStream vs = avi.AddVideoStream().WithEncoder(encoder);
@@ -68,7 +68,7 @@ namespace GoL_CLI
             Console.WriteLine("{0}ms max. evolve time", timingData.Max());
         }
 
-        static Image worldToBitmap(World<Cell> world, Image image)
+        static Image worldToBitmap(World world, Image image)
         {
             Graphics imageGraphics = Graphics.FromImage(image);
             int offsetX = (int)Math.Floor(image.Width / 2.0);

@@ -6,12 +6,12 @@ namespace GoL
     [TestClass]
     public class WorldTest
     {
-        World<Cell> world;
+        World world;
 
         [TestInitialize]
         public void setUp()
         {
-            world = new World<Cell>();
+            world = new World();
         }
 
         [TestMethod]

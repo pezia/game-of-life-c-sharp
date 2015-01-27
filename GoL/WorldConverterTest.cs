@@ -19,7 +19,7 @@ namespace GoL
         {
             string input = "";
 
-            World<Cell> world = worldConverter.fromString(input);
+            World world = worldConverter.fromString(input);
 
             Assert.AreEqual(0, world.Count);
         }
@@ -29,7 +29,7 @@ namespace GoL
         {
             string input = "x";
 
-            World<Cell> world = worldConverter.fromString(input);
+            World world = worldConverter.fromString(input);
 
             Assert.AreEqual(1, world.Count);
             Assert.IsTrue(world.isAlive(new Cell(0, 0)));
@@ -41,7 +41,7 @@ namespace GoL
         {
             string input = "xx";
 
-            World<Cell> world = worldConverter.fromString(input);
+            World world = worldConverter.fromString(input);
 
             Assert.AreEqual(2, world.Count);
             Assert.IsTrue(world.isAlive(new Cell(-1, 0)));
@@ -53,7 +53,7 @@ namespace GoL
         {
             string input = "x\nx";
 
-            World<Cell> world = worldConverter.fromString(input);
+            World world = worldConverter.fromString(input);
 
             Assert.AreEqual(2, world.Count);
             Assert.IsTrue(world.isAlive(new Cell(0, -1)));
@@ -65,7 +65,7 @@ namespace GoL
         {
             string input = "x\n x";
 
-            World<Cell> world = worldConverter.fromString(input);
+            World world = worldConverter.fromString(input);
 
             Assert.AreEqual(2, world.Count);
             Assert.IsTrue(world.isAlive(new Cell(-1, -1)));
@@ -77,7 +77,7 @@ namespace GoL
         {
             string input = " x\n  x\nxxx";
 
-            World<Cell> world = worldConverter.fromString(input);
+            World world = worldConverter.fromString(input);
 
             Assert.AreEqual(5, world.Count);
             Assert.IsTrue(world.isAlive(new Cell(0, -1)));

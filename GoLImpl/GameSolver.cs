@@ -5,33 +5,20 @@ using System.Text;
 
 namespace GoL
 {
-    public class GameSolver<T> : Object where T : ICell
+    public class GameSolver
     {
-        public World<T> evolve(World<T> world)
+        public World evolve(World world)
         {
-            World<T> newWorld = new World<T>();
+            World newWorld = new World();
 
-            List<ICell> possibleBirths = new List<ICell>();
-
-            foreach (T cell in world)
+            var births = world.getPossibleBirths().Where((possibleBirth) => world.getNeighbourCount(possibleBirth) == 3);
+            var cells = world.Where((worldCell) =>
             {
-                int neighbourCount = world.getNeighbourCount(cell);
+                int neighbourCount = world.getNeighbourCount(worldCell);
+                return neighbourCount == 2 || neighbourCount == 3;
+            });
 
-                if (neighbourCount == 2 || neighbourCount == 3)
-                {
-                    newWorld.Add(cell);
-                }
-
-                possibleBirths.AddRange(cell.getNeighbours());
-            }
-
-            foreach (ICell possibleBirthCell in possibleBirths)
-            {
-                if (!world.isAlive((T)possibleBirthCell) && world.getNeighbourCount((T)possibleBirthCell) == 3)
-                {
-                    newWorld.Add((T)possibleBirthCell);
-                }
-            }
+            cells.Union(births).ToList().ForEach((cell) => newWorld.Add(cell));
 
             return newWorld;
         }
